@@ -42,7 +42,7 @@ public class ProcessDifinitionTest {
     public void deploymentProcessDefinitionZip(){
 	Deployment deployment = processEngine.getRepositoryService()
 		.createDeployment()
-		.name("流程定义Zip222")
+		.name("流程定义Zip333")
 		.addZipInputStream(new ZipInputStream(this.getClass().getClassLoader().getResourceAsStream("diagrams/helloworld.zip")))
 		.deploy();
 
@@ -56,7 +56,7 @@ public class ProcessDifinitionTest {
      */
     @Test
     public void findProcessDefinition(){
-	ProcessDefinition processDefinition = processEngine.getRepositoryService().createProcessDefinitionQuery().deploymentId("901").singleResult();  
+	ProcessDefinition processDefinition = processEngine.getRepositoryService().createProcessDefinitionQuery().deploymentId("2601").singleResult();  
 	System.out.println("流程定义ID：" + processDefinition.getId()); 
 	System.out.println("流程定义资源文件：：" + processDefinition.getDiagramResourceName()); 
     }
